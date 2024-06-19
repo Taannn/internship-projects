@@ -1,0 +1,21 @@
+:root {
+  --black: #000000ff;
+  --onyx: #363946ff;
+  --dim-gray: #696773ff;
+  --cadet-gray: #819595ff;
+  --ash-gray: #b1b6a6ff;
+  --eerie-black: #1b2021ff;
+  --ebony: #51513dff;
+  --moss-green: #a6a867ff;
+  --vanilla: #e3dc95ff;
+  --pearl: #e3dcc2ff;
+  --white: #f1f1f1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Manrope", sans-serif;
+}
