@@ -38,11 +38,31 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 90%;
   margin-inline: auto;
 }
-.container {
+.flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.2rem 0;
+}
+.flex {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  align-items: center;
+}
+.two-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.one-two-block {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 .hidden {
   display: none;
@@ -57,6 +77,7 @@ header {
   position: fixed;
   width: 100%;
   /* box-shadow: 0 2px 4px 1px var(--pearl); */
+  z-index: 22;
 }
 header .container {
   position: relative;
@@ -111,17 +132,21 @@ header .container {
   color: var(--white);
   text-decoration: none;
   padding: 0.4rem 0.8rem;
-  transition: all 0.1 ease;
+  transition: transform 0.2s ease;
 }
 .header-contact:hover {
   background-color: var(--ebony);
   outline: 2px solid black;
   transform: scale(1.1);
 }
+.mobile-nav {
+  z-index: 100;
+}
 .mobile-nav ul {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  z-index: 11;
   position: absolute;
   background-color: var(--vanilla);
   padding: 0.4rem 1.5rem;
@@ -257,13 +282,6 @@ header .container {
   animation-delay: 0.5s;
   animation-timing-function: ease-out;
 }
-.hero-services {
-  opacity: 0;
-  transform: translateX(200%);
-  animation: slideInFromRight 1s forwards;
-  animation-delay: 0.5s;
-  animation-timing-function: ease-out;
-}
 @keyframes slideInFromLeft {
   0% {
     opacity: 0;
@@ -274,13 +292,58 @@ header .container {
     transform: translateX(0);
   }
 }
-@keyframes slideInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(200%);
+
+/* SERVICES SYLES */
+.service-image img {
+  width: 100%;
+  display: block;
+}
+.service-image {
+  border-top: 3px solid var(--ebony);
+  border-left: 3px solid var(--ebony);
+  border-bottom: 4px solid var(--eerie-black);
+  border-right: 4px solid var(--eerie-black);
+}
+.service-text {
+  padding-left: 4rem;
+}
+.service-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(270deg, var(--eerie-black) 79%, var(--ebony));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.service-text p {
+  margin-bottom: 1.4rem;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+#services {
+  padding-top: 5rem;
+  background-color: var(--vanilla);
+}
+#services .container {
+  padding: 0 0 5rem 0;
+}
+
+/* SERVICES MEDIA QUERIES */
+@media (max-width: 540px) {
+  .service-image {
+    display: none;
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+  #services .one-two-block {
+    display: block;
+  }
+  .service-text {
+    padding-left: 0;
+  }
+  .service-text h1 {
+    font-size: 3rem;
+  }
+  .service-text p {
+    font-size: 1.1rem;
   }
 }
