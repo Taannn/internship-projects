@@ -16,6 +16,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Manrope", sans-serif;
   line-height: 1.5;
@@ -81,6 +84,14 @@ p, h1, h2, h3, h4, h5, h6 {
 .three-block {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+.four-block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   justify-content: center;
   align-items: center;
@@ -236,8 +247,9 @@ header .container {
 .hero-title p {
   letter-spacing: 2px;
   font-weight: 500;
+  margin-bottom: 2rem;
 }
-.hero-title button {
+.hero-title a {
   background-color: var(--ebony);
   padding: 0.2rem 1rem;
   border-top: 3px solid var(--eerie-black);
@@ -245,11 +257,11 @@ header .container {
   border-bottom: 4px solid var(--black);
   border-right: 4px solid var(--black);
   color: var(--pearl);
-  margin-top: 2rem;
+  text-decoration: none;
   font-size: 1.4rem;
   transition: transform 0.1s ease-in;
 }
-.hero-title button:hover {
+.hero-title a:hover {
   border-top: 3px solid var(--white);
   border-left: 3px solid var(--white);
   border-bottom: 4px solid var(--pearl);
@@ -628,9 +640,90 @@ header .container {
 .contact-newsletter p {
   font-size: 1.2rem;
   letter-spacing: 1px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 .subscribe-button {
   display: flex;
   width: 100%;
+}
+
+/* CONTACT MEDIA QUERIES */
+@media (max-width: 540px) {
+  #contact .container {
+    gap: 2rem;
+    display: block;
+  }
+  .contact-newsletter h1 {
+    font-size: 2.7rem;
+    margin-top: 3rem;
+  }
+}
+
+/* FOOTER STYLES */
+footer {
+  background-color: var(--black);
+}
+.footer-logo img {
+  width: 10rem;
+}
+footer .four-block {
+  padding: 3rem 0;
+  align-items: flex-start;
+}
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.footer-links ul li {
+  list-style: none;
+}
+.footer-links ul li a {
+  color: var(--cadet-gray);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.footer-hours {
+  color: var(--cadet-gray);
+}
+.footer-hours > * {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.footer-hours h2,
+.footer-contact h2 {
+  font-size: 1.2rem;
+}
+address {
+  font-style: normal;
+}
+address > * {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+address .flex a {
+  color: var(--cadet-gray);
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: tranform 0.2s ease-in;
+}
+address .flex a:hover,
+.footer-links ul li a:hover {
+  color: var(--white);
+}
+address .flex {
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.footer-contact {
+  color: var(--cadet-gray);
+}
+
+/* FOOTER MEDIA QUERIES */
+@media (max-width: 540px) {
+  footer .four-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
