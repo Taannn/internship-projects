@@ -467,6 +467,74 @@ header .container {
 .about-title {
   flex: 2;
 }
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "area1 area2 area2 area3"
+    "area4 area4 area5 area5"
+  ;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.testimonials > * {
+  padding: 0.6rem 1rem;
+  border-top: 3px solid var(--cadet-gray);
+  border-left: 3px solid var(--cadet-gray);
+  border-bottom: 4px solid var(--white);
+  border-right: 4px solid var(--white);
+  height: 100%;
+  letter-spacing: 1px;
+}
+.testimonials .flex {
+  justify-content: flex-start;
+}
+.testimonial-image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.testimonial-info p {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.testimonial-info span {
+  font-size: 1rem;
+  font-weight: 200;
+}
+.testimonial-comment {
+  margin-top: 1rem;
+  font-style: italic;
+}
+.first-review {
+  grid-area: area1;
+  background-color: var(--moss-green);
+  color: var(--black);
+}
+.second-review {
+  grid-area: area2;
+  background-color: var(--ebony);
+  color: var(--white);
+}
+.third-review {
+  grid-area: area3;
+  background-color: var(--vanilla);
+  color: var(--black);
+}
+.fourth-review {
+  grid-area: area4;
+  background-color: var(--onyx);
+  color: var(--white);
+}
+.fifth-review {
+  grid-area: area5;
+  background-color: var(--ash-gray);
+  color: var(--black);
+}
 
 /* ABOUT MEDIA QUERIES */
 @media (max-width: 540px) {
@@ -479,5 +547,11 @@ header .container {
   }
   .about-image {
     display: none;
+  }
+  .testimonials {
+    display: block;
+  }
+  .testimonials > * {
+    margin-bottom: 1rem;
   }
 }
