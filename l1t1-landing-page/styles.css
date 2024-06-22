@@ -51,6 +51,12 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
 }
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: flex-start;
+}
 .two-block {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -554,4 +560,77 @@ header .container {
   .testimonials > * {
     margin-bottom: 1rem;
   }
+}
+
+/* CONTACT STYLES */
+#contact {
+  background-color: var(--ebony);
+  padding: 5rem 0;
+}
+#contact .container {
+  gap: 5rem;
+}
+.contact-message {
+  flex: 1;
+}
+.contact-newsletter {
+  flex: 2;
+}
+#contact .flex-column {
+  margin-bottom: 1.2rem;
+}
+.flex-column input,
+.flex-column textarea {
+  border: none;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--vanilla);
+  color: var(--black);
+  border-top: 2px solid var(--onyx);
+  border-left: 2px solid var(--onyx);
+  border-bottom: 3px solid var(--eerie-black);
+  border-right: 3px solid var(--eerie-black);
+  width: 100%;
+}
+.contact-message button,
+.subscribe-button button {
+  border-top: 2px solid var(--onyx);
+  border-left: 2px solid var(--onyx);
+  border-bottom: 3px solid var(--eerie-black);
+  border-right: 3px solid var(--eerie-black);
+  padding: 0.4rem 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.contact-message button:hover,
+.subscribe-button button:hover {
+  background-color: var(--dim-gray);
+  color: var(--white);
+  transform: scale(1.04);
+  border-top: 2px solid var(--cadet-gray);
+  border-left: 2px solid var(--cadet-gray);
+  border-bottom: 3px solid var(--eerie-black);
+  border-right: 3px solid var(--eerie-black);
+}
+.contact-message label,
+.contact-newsletter label {
+  color: var(--white);
+  letter-spacing: 1px;
+}
+.contact-newsletter h1 {
+  font-size: 5rem;
+  background: linear-gradient(279deg, var(--black) 69%, var(--eerie-black));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact-newsletter p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.subscribe-button {
+  display: flex;
+  width: 100%;
 }
