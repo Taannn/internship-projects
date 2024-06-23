@@ -18,3 +18,11 @@ Live Link: https://noctis-pioneers.netlify.app/
 - Responsive Web Design
 - Mobile-first
 - UI/UX Design
+
+![Example Image](./l1t3-calculator/assets/images/codsoft-calculator.png)
+
+## Level 1 Task 3: Calculator
+
+a simple calculator built with HTML, CSS, and a bit of Javascript. Designed to resemble an actual calculator. In terms of logic, it is only capable of doing one calculation using eval(), if more than one, the operator precedence wins instead of calculating form left-to-right. It was a fun experience especially the designing part.
+Link Link: https://codsoft-calc.netlify.app/
+
