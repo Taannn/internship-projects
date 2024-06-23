@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  --ff-heading: "Jaro", sans-serif;
+  --ff-main: "Radio Canada Big", sans-serif;
+
+  --black: #0a0908ff;
+  --chocolate-cosmos: #49111cff;
+  --white-smoke: #f2f4f3ff;
+  --beaver: #a9927dff;
+  --walnut-brown: #5e503fff;
+  --rich-black: #04151fff;
+  --dark-slate-gray: #183a37ff;
+  --wheat: #efd6acff;
+  --mahogany: #c44900ff;
+  --dark-purple: #432534ff;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5;
+  font-family: var(--ff-main);
+}
+input, button {
+  font: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.ff-main {
+  font-family: var(--ff-main);
+}
+.ff-heading {
+  font-family: var(--ff-heading);
+}
