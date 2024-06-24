@@ -377,6 +377,14 @@ img {
   margin: 0 auto;
   border-radius: 0.4rem;
 }
+.about-solved-image,
+.about-mechanism-image {
+  transition: transform 0.1s ease-in;
+}
+.about-solved-image:hover,
+.about-mechanism-image:hover {
+  transform: scale(1.03);
+}
 
 /* ABOUT MEDIA QUERIES */
 @media (max-width: 560px) {
@@ -402,3 +410,55 @@ img {
 }
 
 /* EVOLUTION STYLES */
+#evolution {
+  background-color: var(--black);
+  color: var(--white-smoke);
+}
+#evolution h1 {
+  text-align: center;
+  padding-top: 5rem;
+  font-size: 4.4rem;
+  letter-spacing: 5px;
+  font-weight: 500;
+  color: var(--white-smoke);
+  font-family: var(--ff-heading);
+}
+#evolution .two-block {
+  gap: 4rem;
+}
+.evolution-card {
+  border: 4px solid var(--beaver);
+  color: var(--beaver);
+  height: 100%;
+  padding: 0.6rem 1.6rem;
+  border-radius: 0.4rem;
+  transition: transform 0.2s ease-in;
+}
+.evolution-card:hover {
+  transform: scale(1.02);
+}
+.evolution-card h2 {
+  font-size: 2.1rem;
+  color: var(--beaver);
+  margin-bottom: 1.6rem;
+}
+.evolution-card h2 i {
+  margin-right: 0.4rem;
+}
+.evolution-card p {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* EVOLUTION MEDIA QUERIES */
+@media (max-width: 560px) {
+  #evolution .two-block {
+    display: block;
+  }
+  #evolution h1 {
+    line-height: 1;
+  }
+  .evolution-card {
+    margin-top: 2em;
+  }
+}
