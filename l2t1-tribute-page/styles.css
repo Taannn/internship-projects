@@ -23,6 +23,7 @@
 body {
   line-height: 1.5;
   font-family: var(--ff-main);
+  background-color: var(--beaver);
 }
 input, button {
   font: inherit;
@@ -147,10 +148,11 @@ img {
   color: var(--white-smoke);
   font-family: var(--ff-heading);
   letter-spacing: 2px;
+  font-size: 1.4rem;
 }
 
 /* HEADER MEDIA QUERIES */
-@media (max-width: 540px) {
+@media (max-width: 560px) {
   .header-nav {
     display: none;
   }
@@ -216,15 +218,15 @@ img {
 .tilt {
   height: 20vh;
   overflow: hidden;
-  position: absolute;
-  top: 31.6rem;
+  position: relative;
+  bottom: 13rem;
   z-index: 1;
   background-color: var(--black);
   z-index: -100;
 }
 
 /* HERO MEDIA QUERIES */
-@media (max-width: 540px) {
+@media (max-width: 560px) {
   .hero-image {
     display: none;
   }
@@ -244,3 +246,76 @@ img {
     margin: 1rem 0;
   }
 }
+
+/* INTRODUCTION */
+#introduction {
+  margin-top: 8rem;
+}
+#introduction .container {
+  gap: 4rem;
+  /* align-items: baseline; */
+}
+.introduction-heading {
+  grid-column: span 3;
+}
+.introduction-heading h1 {
+  font-size: 4.8rem;
+  /* letter-spacing: 6px; */
+}
+.introduction-heading p {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.introduction-quotes blockquote {
+  border: 4px solid var(--black);
+  margin-bottom: 1rem;
+  padding: 0.8rem 1.2rem;
+  font-style: italic;
+  background-color: var(--dark-purple);
+  color: var(--white-smoke);
+  border-radius: 0.4rem;
+}
+.introduction-quotes blockquote:hover {
+  color: var(--white-smoke);
+  background-color: var(--rich-black);
+  border: 4px solid var(--wheat);
+}
+.introduction-images {
+  margin-top: 1rem;
+}
+.introduction-images .img {
+  flex: 1;
+  /* border: 1px solid var(--rich-black); */
+  border-radius: 0.4rem;
+  height: 140px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in;
+}
+.introduction-images .img:hover {
+  transform: translateY(-0.4rem);
+}
+
+/* INTRODUCTION MEDIA QUERIES */
+@media (max-width: 560px) {
+  #introduction .container {
+    display: block;
+  }
+  .introduction-heading h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+  .introduction-heading p {
+    font-size: 1rem;
+  }
+  .introduction-quotes {
+    margin-top: 3rem;
+  }
+  .introduction-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+  }
+}
+
+/* ABOUT STYLES */
