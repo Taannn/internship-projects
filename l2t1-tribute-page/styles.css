@@ -47,6 +47,12 @@ img {
   align-items: center;
   gap: 0.6rem;
 }
+.flex-center {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -101,6 +107,7 @@ img {
   padding: 0.4rem 0;
   position: fixed;
   width: 100%;
+  z-index: 12;
 }
 .header-nav .flex {
   gap: 2rem;
@@ -276,6 +283,9 @@ img {
   color: var(--white-smoke);
   border-radius: 0.4rem;
 }
+.introduction-quotes blockquote footer {
+  margin-top: 0.2rem;
+}
 .introduction-quotes blockquote:hover {
   color: var(--white-smoke);
   background-color: var(--rich-black);
@@ -319,3 +329,76 @@ img {
 }
 
 /* ABOUT STYLES */
+#about {
+  background-color: var(--dark-purple);
+  color: var(--white-smoke);
+}
+#about .flex-center img {
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 0.4rem;
+  transition: transform 0.1s ease-in;
+  z-index: 1;
+}
+#about .flex-center img:hover {
+  transform: scale(1.03);
+}
+.about-built-desc h2,
+.about-mechanism-desc h2,
+.about-solved-desc h2 {
+  font-size: 5rem;
+  line-height: 1;
+}
+.about-built-desc p,
+.about-mechanism-desc p,
+.about-solved-desc p {
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+.about-mechanism-image {
+  width: 70%;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+.about-mechanism-desc {
+  position: relative;
+  right: 10rem;
+}
+.about-solved-desc {
+  margin-top: 3rem;
+}
+#about .two-block {
+  gap: 4rem;
+}
+.about-solved-image img {
+  width: 690px;
+  margin: 0 auto;
+  border-radius: 0.4rem;
+}
+
+/* ABOUT MEDIA QUERIES */
+@media (max-width: 560px) {
+  #about .two-block {
+    display: block;
+  }
+  #about .two-block > * h2 {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+  }
+  .about-built-image,
+  .about-mechanism-image,
+  .about-solved-image {
+    display: none;
+  }
+  .about-solved-desc,
+  .about-mechanism-desc {
+    margin-top: 4rem;
+  }
+  .about-mechanism-desc {
+    position: static;
+  }
+}
+
+/* EVOLUTION STYLES */
