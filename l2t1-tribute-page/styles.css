@@ -355,6 +355,7 @@ img {
   letter-spacing: 2px;
   font-size: 1.1rem;
   margin-bottom: 1.1rem;
+  line-height: 1.2;
 }
 .about-mechanism-image {
   width: 70%;
@@ -413,6 +414,7 @@ img {
 #evolution {
   background-color: var(--black);
   color: var(--white-smoke);
+  line-height: 1.2;
 }
 #evolution h1 {
   text-align: center;
@@ -471,6 +473,9 @@ img {
 #culture .three-block {
   gap: 3.3rem;
 }
+#culture p {
+  line-height: 1.2;
+}
 .culture-desc {
   grid-column: span 2;
 }
@@ -518,5 +523,58 @@ img {
   .culture-appearances .culture-appearance-card:last-child {
     position: relative;
     left: 3rem;
+  }
+}
+
+/* SPEEDCUBING STYLES */
+#speedcubing {
+  background-color: var(--walnut-brown);
+  color: var(--wheat);
+}
+#speedcubing .four-block div {
+  overflow: hidden;
+  height: 220px;
+}
+#speedcubing .four-block img {
+  width: 100%;
+}
+#speedcubing h1 {
+  text-align: center;
+  font-size: 5.2rem;
+  padding-top: 5rem;
+  font-family: var(--ff-heading);
+  letter-spacing: 6px;
+  font-weight: 500;
+}
+#speedcubing .two-block p {
+  line-height: 1.2;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.4rem;
+}
+#speedcubing .two-block {
+  padding-bottom: 0;
+  align-items: flex-start;
+}
+#speedcubing h2 {
+  font-size: 2rem;
+  color: var(--white-smoke);
+}
+.highlight {
+  font-size: 1.4rem;
+  color: var(--white-smoke);
+}
+
+/* SPEEDCUBING MEDIA QUERIES */
+@media (max-width: 560px) {
+  #speedcubing .two-block {
+    display: block;
+    padding-bottom: 3rem;
+  }
+  #speedcubing .four-block {
+    display: none;
+  }
+  #speedcubing h1 {
+    font-size: 4rem;
   }
 }
