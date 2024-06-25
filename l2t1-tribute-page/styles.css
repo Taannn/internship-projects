@@ -462,3 +462,61 @@ img {
     margin-top: 2em;
   }
 }
+
+/* CULTURE STYLES */
+#culture {
+  background-color: var(--dark-purple);
+  color: var(--white-smoke);
+}
+#culture .three-block {
+  gap: 3.3rem;
+}
+.culture-desc {
+  grid-column: span 2;
+}
+.culture-desc p:not(:first-child) {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.culture-desc h2 {
+  font-size: 3rem;
+  background: linear-gradient(270deg, var(--white-smoke), var(--beaver));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.culture-appearances {
+  padding: 0.6rem 1rem;
+}
+.culture-appearances h2 {
+  font-size: 1.3rem;
+  color: var(--beaver);
+  margin-bottom: 0.6rem;
+}
+.culture-appearances > * {
+  width: 80%;
+  margin: 0 auto;
+}
+.culture-appearances > *:not(:first-child) {
+  margin-top: 2rem;
+}
+
+/* CULTURE MEDIA QUERIES */
+@media (max-width: 560px) {
+  #culture .three-block {
+    display: block;
+  }
+  .culture-desc h2 {
+    line-height: 1;
+    margin-bottom: 0.6rem;
+  }
+  .culture-appearances .culture-appearance-card:first-child {
+    position: relative;
+    right: 3rem;
+  }
+  .culture-appearances .culture-appearance-card:last-child {
+    position: relative;
+    left: 3rem;
+  }
+}
