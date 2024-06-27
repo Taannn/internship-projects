@@ -632,12 +632,12 @@ img {
 }
 
 /* FOOTER STYLES  */
-footer {
+#footer {
   background-color: var(--black);
   color: var(--walnut-brown);
 }
-footer .four-block {
-  padding: 1rem 0 2rem;
+#footer .four-block {
+  padding: 2rem 0 4rem;
 }
 .footer-navigations {
   height: 100%;
