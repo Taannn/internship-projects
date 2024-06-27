@@ -546,6 +546,9 @@ img {
   letter-spacing: 6px;
   font-weight: 500;
 }
+#speedcubing .two-block {
+  gap: 3rem;
+}
 #speedcubing .two-block p {
   line-height: 1.2;
   font-size: 1.1rem;
@@ -576,5 +579,54 @@ img {
   }
   #speedcubing h1 {
     font-size: 4rem;
+  }
+}
+
+/* FUN FACTS STYLES */
+#funFacts {
+  background-color: var(--beaver);
+}
+#funFacts .container {
+  gap: 2rem;
+}
+#funFacts h1 {
+  font-size: 4.2rem;
+  padding-top: 5rem;
+  font-family: var(--ff-heading);
+  letter-spacing: 5px;
+  color: var(--rich-black);
+  text-align: center;
+}
+.fun-fact-card {
+  height: 100%;
+}
+.fun-fact-card h2 {
+  font-size: 1.6rem;
+  color: var(--rich-black);
+  line-height: 1;
+  margin: 1rem 0;
+}
+.fun-fact-card p {
+  font-size: 1.02rem;
+  /* letter-spacing: 1px; */
+}
+.fun-fact-image {
+  width: 100%; /* Or set a specific width */
+  height: 300px; /* Or set a specific height */
+  overflow: hidden;
+  position: relative;
+}
+.fun-fact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* FUN FACTS MEDIA QUERIES */
+@media (max-width: 560px) {
+  #funFacts .three-block {
+    grid-template-columns: 1fr;
+    gap: 4rem;
   }
 }
