@@ -293,26 +293,31 @@ img {
 }
 .introduction-images {
   margin-top: 1rem;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  z-index: 13;
 }
 .introduction-images .img {
   flex: 1;
-  /* border: 1px solid var(--rich-black); */
   border-radius: 0.4rem;
-  height: 140px;
   overflow: hidden;
   transition: transform 0.2s ease-in;
-}
-.introduction-images .img:hover {
-  transform: translateY(-0.4rem);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* INTRODUCTION MEDIA QUERIES */
 @media (max-width: 560px) {
   #introduction .container {
     display: block;
+    padding-top: 0;
   }
   .introduction-heading h1 {
-    font-size: 4rem;
+    font-size: 3.2rem;
     line-height: 1.1;
   }
   .introduction-heading p {
@@ -432,7 +437,7 @@ img {
   border: 4px solid var(--beaver);
   color: var(--beaver);
   height: 100%;
-  padding: 0.6rem 1.6rem;
+  padding: 1rem 1.6rem;
   border-radius: 0.4rem;
   transition: transform 0.2s ease-in;
 }
@@ -608,11 +613,10 @@ img {
 }
 .fun-fact-card p {
   font-size: 1.02rem;
-  /* letter-spacing: 1px; */
 }
 .fun-fact-image {
-  width: 100%; /* Or set a specific width */
-  height: 300px; /* Or set a specific height */
+  width: 100%;
+  height: 300px;
   overflow: hidden;
   position: relative;
 }
@@ -637,7 +641,7 @@ img {
   color: var(--walnut-brown);
 }
 #footer .four-block {
-  padding: 2rem 0 4rem;
+  padding: 1rem 0 2rem;
 }
 .footer-navigations {
   height: 100%;
@@ -660,14 +664,14 @@ img {
 
 /* FOOTER MEDIA QUERIES */
 @media (max-width: 560px) {
-  footer .four-block {
+  #footer .four-block {
     grid-template-columns: 1fr;
     padding: 3rem 0;
   }
-  footer .four-block div:first-child {
+  #footer .four-block div:first-child {
     margin-bottom: 3rem;
   }
-  footer .four-block div:last-child p {
+  #footer .four-block div:last-child p {
     margin-top: 1.4rem;
     font-size: 1.2rem;
   }
