@@ -1,0 +1,39 @@
+#services h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5rem 0;
+}
+#services .three-block {
+  gap: 1rem;
+}
+.services-card {
+  height: 100%;
+  padding: 0.6rem 1.2rem;
+  transition: transform 0.3s ease;
+}
+.services-card:hover {
+  background: linear-gradient(270deg, var(--racing-green) 15%, var(--night));
+  transform: scale(1.03);
+}
+.services-card p {
+  margin-top: 0.4rem;
+  line-height: 1.1s;
+  letter-spacing: 1px;
+}
+.services-card .gradient {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 560px) {
+  #services .three-block {
+    grid-template-columns: 1fr;
+  }
+  #services h1 {
+    padding-top: 5rem;
+    margin-top: 0;
+  }
+}
