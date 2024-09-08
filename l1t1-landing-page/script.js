@@ -18,11 +18,14 @@ menu.addEventListener("click", () => {
 });
 
 // DYNAMIC CONTENT
+
 // elements
-const headerNav = document.querySelector('.header-nav ul');
-const mobileNav = document.querySelector('.mobile-nav ul');
+const headerNavElement = document.querySelector('.header-nav ul');
+const mobileNavElement = document.querySelector('.mobile-nav ul');
 const servicesElement = document.getElementById('services');
 const featuresElement = document.getElementById('features');
+const tetimonialsElement = document.querySelector('.testimonials');
+const footerLinksElement = document.querySelector('.footer-links ul');
 
 // arrays of info
 const headerLinks = [
@@ -83,6 +86,48 @@ const featureItems = [
     desc: 'Our client-centric approach ensures transparent communication, dedicated support, and collaborative partnerships, exceeding your expectations every step of the way..'
   }
 ];
+const testimonialItems = [
+  {
+    class: 'first-review',
+    img: './assets/images/emily.jpg',
+    alt: 'Emily Clark',
+    name: 'Emily Clark',
+    role: 'Marketing Manager',
+    desc: '"Noctis Pioneering transformed our online presence with their exceptional UI/UX design. Our customers love the new interface, and it has significantly improved our user engagement."'
+  },
+  {
+    class: 'second-review',
+    img: './assets/images/james.jpg',
+    alt: 'James Smith',
+    name: 'James Smith',
+    role: 'CEO, Tech Solutions Inc.',
+    desc: '"We partnered with Noctis Pioneering for app development, and they exceeded our expectations. Their expertise and dedication helped us launch a high-performing app that has boosted our business growth."'
+  },
+  {
+    class: 'third-review',
+    img: './assets/images/sara.jpg',
+    alt: 'Sarah Johnson',
+    name: 'Sarah Johnson',
+    role: 'Digital Strategist',
+    desc: '"Noctis Pioneering transformed our online presence with their exceptional UI/UX design. Our customers love the new interface, and it has significantly improved our user engagement."'
+  },
+  {
+    class: 'fourth-review',
+    img: './assets/images/michael.jpg',
+    alt: 'Michael Lee',
+    name: 'Michael Lee',
+    role: 'Startup Founder',
+    desc: '"Noctis Pioneering&quot;s programming team is top-notch. They created a scalable backend solution for our platform, allowing us to handle increased traffic and scale our business rapidly."'
+  },
+  {
+    class: 'fifth-review',
+    img: './assets/images/alexandra.jpg',
+    alt: 'Alexandra White',
+    name: 'Alexandra White',
+    role: 'Creative Director',
+    desc: '"Working with Noctis Pioneering on our website redesign was a breeze. They listened to our vision and delivered a stunning website that perfectly represents our brand."'
+  }
+];
 
 // functions for dynamic content creation
 const createNav = (links, element) => {
@@ -134,14 +179,36 @@ const createFeatures = (features, element) => {
 
   element.innerHTML += featuresContent;
 };
+const createTestimonials = (testimonials, element) => {
+  const createTestimonial = (testimonial) => {
+    return `
+    <div class="${testimonial.class}">
+      <div class="testimonial-avatar flex">
+        <div class="testimonial-image"><img src="${testimonial.img}" alt="${testimonial.alt}"></div>
+        <div class="testimonial-info">
+          <p>${testimonial.name}</p>
+          <span>${testimonial.role}</span>
+        </div>
+      </div>
+      <p class="testimonial-comment">${testimonial.desc}</p>
+    </div>
+  `;
+  }
+  const testimonialsContent = testimonials.map(testimonial => createTestimonial(testimonial)).join('');
 
+  element.innerHTML += testimonialsContent;
+};
 
-
-
-createNav(headerLinks, headerNav);
+// created content
+createNav(headerLinks, headerNavElement);
 createNav(headerLinks.concat([{
   href: '#contact',
   link: 'Contact Us'
-}]), mobileNav);
+}]), mobileNavElement);
+createNav(headerLinks.concat([{
+  href: '#contact',
+  link: 'Contact'
+}]), footerLinksElement);
 createServices(serviceItems, servicesElement);
 createFeatures(featureItems, featuresElement);
+createTestimonials(testimonialItems, tetimonialsElement);
